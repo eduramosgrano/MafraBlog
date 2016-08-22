@@ -123,7 +123,7 @@ get_header(); ?>
 
 						<?php if ( have_posts() ) : ?>
 								<?php
-								$argsEspHist = array( 'post_type' => 'EspeciariasHistoria', 'posts_per_page' => 8 );
+								$argsEspHist = array( 'post_type' => 'EspeciariasHistoria', 'posts_per_page' => 4 );
 								$loopEspHist = new WP_Query( $argsEspHist );
 
 								$r = 0;

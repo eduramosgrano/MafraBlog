@@ -12,17 +12,34 @@
 
 
 //BASICS
+a{
+  @include transition-duration(.5s);
+  @include transition-property(color);
+  cursor: pointer;
+}
+
+.post-thumbnail{
+  margin-top: 40px;
+}
+
 figure, .post-thumbnail{
-    width: 840px;
+    //width: 840px;
     padding: 10px;
+    padding-bottom: 0;
     border: 1px solid $gray-lighter;
     font-size: 15px;
     font-style: italic;
-    color: $gray-lighter;
+    color: $gray-lighter-more;
     margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
     img{
       width: 100% !important;
       margin-bottom: 10px;
+      height: auto;
+    }
+    figcaption{
+      padding-bottom: 10px;
     }
     &.alignleft{
       float: left;
@@ -31,6 +48,10 @@ figure, .post-thumbnail{
     &.alignright{
       float: right;
       margin-left: 20px;
+    }
+    &.aligncenter{
+      margin-left: auto;
+      margin-right: auto;
     }
 }
 

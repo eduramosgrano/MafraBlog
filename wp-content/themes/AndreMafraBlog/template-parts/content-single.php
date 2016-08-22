@@ -15,11 +15,15 @@
 
 	<?php twentysixteen_excerpt(); ?>
 	<?php
-		if(has_post_thumbnail()){ ?>
+		if(has_post_thumbnail()){
+			if(is_page('about')){
+
+			}else{
+				?>
 			<div class="post-thumbnail">
 			<?php echo get_the_post_thumbnail($post->ID,'full',array( 'class' =>'img-responsive')); ?>
 			</div>
-			<?php } ?>
+			<?php }} ?>
 
 
 

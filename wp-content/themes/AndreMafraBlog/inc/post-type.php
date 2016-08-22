@@ -140,7 +140,7 @@ add_action('init', 'type_post_receitas');
   function type_post_receitas() {
     $labels = array(
       'name' => _x('Receitas', 'post type general name'),
-      'singular_name' => _x('Receita', 'post type singular name'),
+      'singular_name' => _x('Receitas', 'post type singular name'),
       'add_new' => _x('Adicionar Novo', 'Novo item'),
       'add_new_item' => __('Novo Item'),
       'edit_item' => __('Editar Item'),
@@ -150,7 +150,7 @@ add_action('init', 'type_post_receitas');
       'not_found' =>  __('Nenhum registro encontrado'),
       'not_found_in_trash' => __('Nenhum registro encontrado na lixeira'),
       'parent_item_colon' => '',
-      'menu_name' => 'Especiarias por Ordem'
+      'menu_name' => 'Receitas'
     );
 
     $args = array(

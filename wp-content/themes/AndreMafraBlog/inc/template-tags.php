@@ -122,7 +122,7 @@ if ( ! function_exists( 'twentysixteen_post_thumbnail' ) ) :
  * @since Twenty Sixteen 1.0
  */
 function twentysixteen_post_thumbnail() {
-	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() || is_page( 'about' )   ) {
 		return;
 	}
 
@@ -181,7 +181,7 @@ function twentysixteen_excerpt_more() {
 	$link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
 		esc_url( get_permalink( get_the_ID() ) ),
 		/* translators: %s: Name of current post */
-		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ), get_the_title( get_the_ID() ) )
+		sprintf( __( 'Continue lendo<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ), get_the_title( get_the_ID() ) )
 	);
 	return ' &hellip; ' . $link;
 }
